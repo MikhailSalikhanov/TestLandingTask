@@ -14,14 +14,11 @@
 .mainContent{
     margin-left: adapt(390);
     margin-right: adapt(390);
-    // margin-left: calc(10px + 380 * (100vw - 1140px) / 780) ;
-    // margin-right: calc(10px + 380 * (100vw - 1140px) / 780) ;
     position: relative;
     order: 2;
 }
 
 .top {
-        // position: relative;
     display: flex;
     justify-content: space-between;
     gap: adapt(88);
@@ -71,7 +68,6 @@
             font-size: adapt(14);
             line-height: adapt(30);
             color: #FFB800;
-
             margin-top: adapt(237);
         }
 
@@ -81,7 +77,6 @@
             font-size: adapt(72);
             line-height: adapt(82);
             color: #0C122D;
-
             margin-top: adapt(30);
             width: adapt(500);
 
@@ -93,7 +88,6 @@
             font-size: adapt(16);
             line-height: adapt(24);
             color: #575C74;
-
             margin-top: adapt(40);
 
         }
@@ -118,7 +112,6 @@
                 font-size: adapt(14);
             }
 
-
             .orange{
                 border: adapt(1) solid #FFB800;
                 border-radius: adapt(8);
@@ -132,8 +125,6 @@
                 font-size: adapt(14);
             }
         }
-
-
     }
 
     &__pict {
@@ -158,7 +149,6 @@
         }
     }
 }
-
 
 .advantages {
     width: adapt(1141);
@@ -201,9 +191,7 @@
             line-height: adapt(22);
             color: #575C74;
             padding-left: adapt(60);
-        }
-        
-        
+        }        
     }
     
     .item2, .item3{
@@ -213,7 +201,6 @@
         width: adapt(270);
     }
 }
-
 
 .about {
 
@@ -230,9 +217,6 @@
                 width: adapt(570);
                 height: adapt(616);
             }
-        }
-
-        &_text {
         }
 
         &_header {
@@ -342,7 +326,6 @@
     &__img {
         width: adapt(570);
         height: adapt(616);
-        // padding-top: adapt(24);
         img{
             width: adapt(570);
             height: adapt(616);
@@ -363,7 +346,6 @@
             color: #575C74;
             width: adapt(285);
             height: adapt(332);
-
             padding: adapt(60) adapt(30) adapt(132) adapt(30);
         }
 
@@ -375,7 +357,6 @@
             color: #FFFFFF;
             width: adapt(285);
             height: adapt(332);
-
             background-color: #1B5FC1;
             padding: adapt(60) adapt(30) adapt(132) adapt(30);
             border-radius: 0px adapt(20) 0px 0px;
@@ -384,10 +365,8 @@
         &_orange {
             width: adapt(570);
             height: adapt(284);
-
             background: #FFB800;
             border-radius: 0px 0px adapt(20) 0px;
-
         }
     }
 
@@ -397,14 +376,11 @@
         font-size: adapt(15);
         line-height: adapt(24);
         color: #FFFFFF;
-
         width: adapt(285);
         height: adapt(332);
-
         position: absolute;
         bottom: 0px;
         left: adapt(285);
-
         background-color: #1B5FC1;
         padding: adapt(60) adapt(30) adapt(80) adapt(30);
     }
@@ -460,16 +436,12 @@
     gap: adapt(87);
     margin-bottom: adapt(23);
 
-    &_text {
-    }
-
     &_header {
         font-family: 'Rubik';
         font-weight: 700;
         font-size: adapt(48);
         line-height: adapt(50);
         color: #0C122D;
-
         margin-bottom: adapt(20);
     }
 
@@ -479,7 +451,6 @@
         font-size: adapt(16);
         line-height: adapt(30);
         color: #575C74;
-
         margin-bottom: adapt(35);
     }
 
@@ -573,14 +544,12 @@
         border-radius: adapt(8);
         width: adapt(115);
         height: adapt(46);
-
         font-family: 'Rubik';
         font-weight: 500;
         font-size: adapt(14);
         line-height: adapt(46);
         text-align: center;
         color: #FFFFFF;
-
         margin: 0 auto;
     }
 }
@@ -619,19 +588,14 @@
     &__call {
         margin: adapt(41) 0 adapt(39) 0px;
         display: flex;
-
     }
 
     &__email {
         margin: adapt(41) adapt(390) adapt(39) 0px;
-
         display: flex;
     }
 }
 .contactItem {
-
-    &_wrapper {
-    }
 
     &_header {
         font-family: 'Rubik';
