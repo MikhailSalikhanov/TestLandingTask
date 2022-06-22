@@ -1,0 +1,775 @@
+@use "sass:math";
+
+@function adapt($px) {
+    $result1: math.div($px, 1920) * 100;
+    $result2: $result1 + vw;
+    @return $result2;
+};
+
+.wrapper{
+    width: adapt(1920);
+    position: relative;
+    margin: 0 auto;
+}
+.mainContent{
+    margin-left: adapt(390);
+    margin-right: adapt(390);
+    // margin-left: calc(10px + 380 * (100vw - 1140px) / 780) ;
+    // margin-right: calc(10px + 380 * (100vw - 1140px) / 780) ;
+    position: relative;
+    order: 2;
+}
+
+.top {
+        // position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: adapt(88);
+
+    &__nav {
+        position: absolute;
+        top: adapt(20);
+        right: 0px;
+        display: inline-flex;
+        width: adapt(611);
+        height: adapt(47);
+        justify-content: space-between;
+
+        &_item {
+            padding-top: adapt(9);
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: adapt(16);
+            line-height: adapt(30);
+            color: #575C74;
+        }
+
+        .item_button{
+            padding-top: 0px;
+            width: adapt(123);
+            height: adapt(47);
+            line-height: adapt(47);
+            background: #1B5FC1;
+            border-radius: adapt(8);
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+
+    &__text {
+
+        &_logo{
+            width: adapt(161);
+            height: adapt(40);
+            background: #C4C4C4;
+            margin-top: adapt(24);
+        }   
+
+        &_model {
+            font-family: 'Rubik';
+            font-weight: 500;
+            font-size: adapt(14);
+            line-height: adapt(30);
+            color: #FFB800;
+
+            margin-top: adapt(237);
+        }
+
+        &_header {
+            font-family: 'Rubik';
+            font-weight: 700;
+            font-size: adapt(72);
+            line-height: adapt(82);
+            color: #0C122D;
+
+            margin-top: adapt(30);
+            width: adapt(500);
+
+        }
+
+        &_description {
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: adapt(16);
+            line-height: adapt(24);
+            color: #575C74;
+
+            margin-top: adapt(40);
+
+        }
+
+        &_buttons {
+            margin-top: adapt(54);
+            display: flex;
+            padding: adapt(8) adapt(24);
+            gap: adapt(10);
+            
+            .blue{
+                background: #1B5FC1;
+                width: adapt(115);
+                height: adapt(46);
+                line-height: adapt(46);
+                box-shadow: 0px adapt(10) adapt(15) rgba(27, 95, 193, 0.19);
+                border-radius: adapt(8);
+                text-align: center;
+                color: #FFFFFF;
+                font-family: 'Rubik';
+                font-weight: 500;
+                font-size: adapt(14);
+            }
+
+
+            .orange{
+                border: adapt(1) solid #FFB800;
+                border-radius: adapt(8);
+                width: adapt(125);
+                height: adapt(46);
+                line-height: adapt(46);
+                text-align: center;
+                color: #FFB800;
+                font-family: 'Rubik';
+                font-weight: 500;
+                font-size: adapt(14);
+            }
+        }
+
+
+    }
+
+    &__pict {
+        margin-top: adapt(147);
+
+        img{
+            width: adapt(496);
+            height: adapt(744);
+            border-radius: adapt(20) adapt(20) adapt(20) 0px;
+        }
+    }
+
+    &__back{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: -1;
+
+        img{
+            width: adapt(927);
+            height: adapt(891);
+        }
+    }
+}
+
+
+.advantages {
+    width: adapt(1141);
+    height: adapt(179);
+    display: flex;
+    gap: adapt(31);
+    margin-top: adapt(72);
+    margin-bottom: adapt(133);
+
+    img{
+        width: adapt(40);
+        height: adapt(40);
+    }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+
+        &_img {
+            margin-top: adapt(6);
+            width: adapt(40);
+            height: adapt(40);
+        }
+
+        &_header {
+            font-family: 'Open Sans';
+            font-weight: 700;
+            font-size: adapt(20);
+            line-height: adapt(27);
+            height: adapt(54);
+            width: adapt(210);
+            color: #0C122D;
+            padding-left: adapt(20);
+        }
+
+        &_text {
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: adapt(15);
+            line-height: adapt(22);
+            color: #575C74;
+            padding-left: adapt(60);
+        }
+        
+        
+    }
+    
+    .item2, .item3{
+        width: adapt(254);
+    }
+    .item1, .item4{
+        width: adapt(270);
+    }
+}
+
+
+.about {
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        gap: adapt(47);
+        margin-bottom: adapt(80);
+
+        &_img {
+            width: adapt(570);
+            height: adapt(616);
+            img{
+                width: adapt(570);
+                height: adapt(616);
+            }
+        }
+
+        &_text {
+        }
+
+        &_header {
+            font-family: 'Rubik';
+            font-weight: 700;
+            font-size: adapt(48);
+            line-height: adapt(50);
+            color: #0C122D;
+            margin-bottom: adapt(26);
+        }
+
+        &_description {
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: adapt(16);
+            line-height: adapt(30);
+            color: #575C74;
+            width: adapt(523);
+
+        }
+    }
+}
+
+.info {
+    display: flex;
+    position: relative;
+
+    &_header {
+        font-family: 'Rubik';
+        font-weight: 700;
+        font-size: adapt(20);
+        line-height: adapt(50);
+        color: #0C122D;
+        padding: adapt(45) 0px adapt(5) adapt(38);
+    }
+
+    &_description {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: adapt(15);
+        line-height: adapt(24);
+        color: #000000;
+        padding: 0px adapt(38);
+        margin-bottom: adapt(28);
+    }
+
+    &_contacts {
+        display: flex;
+        color: red;
+    }
+
+    &_button{
+        font-family: 'Rubik';
+        font-weight: 500;
+        font-size: adapt(14);
+        line-height: adapt(46);
+        text-align: center;
+        color: #1B5FC1;
+        width: adapt(125);
+        height: adapt(46);
+        border: adapt(1) solid #1B5FC1;
+        border-radius: adapt(8);
+        margin-left: adapt(38);
+        margin-right: adapt(40);
+    }
+
+    &_line{
+        width: adapt(1);
+        height: adapt(46);
+        background-color: #FFFFFF;
+        margin-right: adapt(40);
+    }
+
+    &_img{
+        width: adapt(46);
+        height: adapt(46);
+        img{
+            width: adapt(46);
+            height: adapt(46);
+        }
+    }
+
+    &_tel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_contact {
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: adapt(14);
+        line-height: adapt(24);
+        color: #1B5FC1;
+        margin-left: adapt(13);
+        width: adapt(189);
+    }
+
+    &_number {
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: adapt(24);
+        line-height: adapt(24);
+        color: #000000;
+        margin-left: adapt(13);
+    }
+
+    &__img {
+        width: adapt(570);
+        height: adapt(616);
+        // padding-top: adapt(24);
+        img{
+            width: adapt(570);
+            height: adapt(616);
+        }
+    }
+
+    &__text {
+        width: adapt(570);
+        height: adapt(616);
+        display: flex;
+        flex-wrap: wrap;
+
+        &_white {
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: adapt(15);
+            line-height: adapt(24);
+            color: #575C74;
+            width: adapt(285);
+            height: adapt(332);
+
+            padding: adapt(60) adapt(30) adapt(132) adapt(30);
+        }
+
+        &_blue {
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: adapt(15);
+            line-height: adapt(24);
+            color: #FFFFFF;
+            width: adapt(285);
+            height: adapt(332);
+
+            background-color: #1B5FC1;
+            padding: adapt(60) adapt(30) adapt(132) adapt(30);
+            border-radius: 0px adapt(20) 0px 0px;
+        }
+
+        &_orange {
+            width: adapt(570);
+            height: adapt(284);
+
+            background: #FFB800;
+            border-radius: 0px 0px adapt(20) 0px;
+
+        }
+    }
+
+    &__absolute {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: adapt(15);
+        line-height: adapt(24);
+        color: #FFFFFF;
+
+        width: adapt(285);
+        height: adapt(332);
+
+        position: absolute;
+        bottom: 0px;
+        left: adapt(285);
+
+        background-color: #1B5FC1;
+        padding: adapt(60) adapt(30) adapt(80) adapt(30);
+    }
+}
+
+
+.certification {
+    display: flex;
+    margin: adapt(80) 0px;
+    width: adapt(894);
+    height: adapt(80);
+    justify-content: space-between;
+    align-items: center;
+
+    &__text {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: adapt(15);
+        line-height: adapt(24);
+        color: #575C74;
+    }
+
+    &__line {
+        width: adapt(147);
+        height: adapt(1);
+        background: #FFB800;
+    }
+
+    &__logo1 {
+        img{
+            width: adapt(67);
+            height: adapt(80);
+        }
+    }
+    &__logo2 {
+        img{
+            width: adapt(127);
+            height: adapt(80);
+        }
+    }
+    &__logo3 {
+        img{
+            width: adapt(105);
+            height: adapt(80);
+        }
+    }
+}
+
+
+
+.reasons {
+    display: flex;
+    gap: adapt(87);
+    margin-bottom: adapt(23);
+
+    &_text {
+    }
+
+    &_header {
+        font-family: 'Rubik';
+        font-weight: 700;
+        font-size: adapt(48);
+        line-height: adapt(50);
+        color: #0C122D;
+
+        margin-bottom: adapt(20);
+    }
+
+    &_descriptions {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: adapt(16);
+        line-height: adapt(30);
+        color: #575C74;
+
+        margin-bottom: adapt(35);
+    }
+
+    &__img {
+            img{
+                width: adapt(400);
+                height: adapt(630);
+            }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        width: adapt(650);
+        height: adapt(302);
+        gap: adapt(26);
+
+    }
+
+    &__item {
+        width: adapt(312);
+        height: adapt(141);
+        display: flex;
+
+        &_icon {
+            width: adapt(56);
+            height: adapt(56);
+            img{
+                width: adapt(56);
+                height: adapt(56);
+            }
+        }
+
+        &_header {
+            font-family: 'Open Sans';
+            font-weight: 700;
+            font-size: adapt(20);
+            line-height: adapt(28);
+            color: #0C122D;
+            padding-left: adapt(18);
+        }
+
+        &_expl {
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: adapt(15);
+            line-height: adapt(22);
+            color: #575C74;
+            padding-left: adapt(18);
+        }
+    }
+}
+
+
+.comments{
+    margin-bottom: adapt(88);
+        img{
+            width: adapt(1214);
+            height: adapt(475);
+        }
+}
+
+.shopNow {
+    width: adapt(750);
+    height: adapt(210);
+    margin: 0 auto;
+    margin-bottom: adapt(120);
+
+    &__head {
+        font-family: 'Rubik';
+        font-weight: 700;
+        font-size: adapt(48);
+        line-height: adapt(50);
+        text-align: center;
+        color: #0C122D;
+    }
+
+    &__text {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: adapt(16);
+        line-height: adapt(30);
+        text-align: center;
+        color: #575C74;
+        margin: adapt(44) 0 adapt(35) 0;
+    }
+
+    &__button {
+        background: #1B5FC1;
+        box-shadow: 0px adapt(10) adapt(15) rgba(27, 95, 193, 0.19);
+        border-radius: adapt(8);
+        width: adapt(115);
+        height: adapt(46);
+
+        font-family: 'Rubik';
+        font-weight: 500;
+        font-size: adapt(14);
+        line-height: adapt(46);
+        text-align: center;
+        color: #FFFFFF;
+
+        margin: 0 auto;
+    }
+}
+
+
+.contacts {
+    width: adapt(1920);
+    position: relative;
+    left: adapt(-390);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFB800;
+    height: adapt(133);
+
+    &_img {
+        margin-right: adapt(14);
+        margin-top: adapt(8);
+        img{
+            width: adapt(32);
+            // height: 100%;
+        }
+    }
+
+    &__address {
+        margin: adapt(41) 0 adapt(39) adapt(390);
+        display: flex;
+    }
+
+    &__line {
+        background: #E0E0E0;
+        width: adapt(1);
+        height: adapt(52);
+    }
+
+    &__call {
+        margin: adapt(41) 0 adapt(39) 0px;
+        display: flex;
+
+    }
+
+    &__email {
+        margin: adapt(41) adapt(390) adapt(39) 0px;
+
+        display: flex;
+    }
+}
+.contactItem {
+
+    &_wrapper {
+    }
+
+    &_header {
+        font-family: 'Rubik';
+        font-weight: 500;
+        font-size: adapt(20);
+        line-height: adapt(30);
+        color: #0C122D;
+    }
+
+    &_text {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: adapt(15);
+        line-height: adapt(20);
+        color: #0C122D;
+    }
+}
+
+
+footer{
+    width: adapt(1920);
+    height: adapt(324);
+    position: relative;
+    left: adapt(-390);
+    background: #ECF0F5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerText {
+    width: adapt(340);
+    height: adapt(237);
+    margin: adapt(73) 0 adapt(107) adapt(390);
+
+    &_logo {
+        width: adapt(161);
+        height: adapt(40);
+        background: #C4C4C4;
+        margin-bottom: adapt(33);
+    }
+
+    &_about {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: adapt(15);
+        line-height: adapt(24);
+        color: #575C74;
+    }
+}
+.footerCompany {
+    margin-top: adapt(73);
+}
+
+.footer {
+
+    &_header {
+        font-family: 'Rubik';
+        font-weight: 500;
+        font-size: adapt(20);
+        line-height: adapt(30);
+        color: #0C122D;
+        margin-bottom: adapt(12);
+    }
+
+    &_item {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: adapt(15);
+        line-height: adapt(28);
+        text-align: left;
+        color: #575C74;
+    }
+
+    &_home{
+        color: #1B5FC1;
+    }
+}
+
+.footerSM {
+    margin: adapt(73) adapt(390) 0px 0px;
+    display: flex;
+    gap: adapt(13);
+}
+.footer_follow{
+    position: relative;
+    left: adapt(-35);
+}
+.footerSM_img{
+    margin-top: adapt(48);
+    width: adapt(23);
+    height: adapt(129);
+    img{
+        width: adapt(23);
+        height: adapt(129);
+    }
+}
+
+.background1{
+    position: absolute;
+    left: 0px;
+    top: adapt(1000);
+    img{
+        width: adapt(756);
+        height: adapt(1462);
+    }
+}
+
+.background2{
+    position: absolute;
+    right: 0px;
+    top: adapt(1950);
+    img{
+        width: adapt(760);
+        height: adapt(1462);
+    }
+}
+
+.backgroun3{
+    width: 100%;
+    height: adapt(1195);
+    background: #F7FDFB;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    order: -10;
+}
+
+.copyright{
+        width: adapt(1920);
+        height: adapt(92);
+        position: relative;
+        left: adapt(-390);
+        background: #ECF0F5;
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: adapt(14);
+        line-height: adapt(92);
+        color: #575C74;
+        text-align: center;
+        border-top: adapt(1) solid #E1E6EC;
+}
